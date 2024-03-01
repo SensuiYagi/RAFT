@@ -67,3 +67,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     demo(args)
+
+# python core/demo.py --model=models/raft-things.pth --path=demo-frames
