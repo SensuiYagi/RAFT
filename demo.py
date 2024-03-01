@@ -22,8 +22,8 @@ def load_image(imfile):
     return img[None].to(DEVICE)
 
 def viz(img, flo):
-    img = img[0].permute(1,2,0).numpy()
-    flo = flo[0].permute(1,2,0).numpy()
+    img = img[0].permute(1,2,0).cpu().numpy()
+    flo = flo[0].permute(1,2,0).cpu().numpy()
     
     # map flow to rgb image
     flo = flow_viz.flow_to_image(flo)
